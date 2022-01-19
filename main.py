@@ -44,7 +44,7 @@ def main(
 
     model = path_test.split("/")[-1]
     text_file_name = model + ".txt"
-    out_path = os.join.path(output_path, text_file_name)
+    out_path = os.path.join(output_path, text_file_name)
     text_file = open(out_path, "w")
     text_file.write(f"IS inf : {IS_infinity}\n")
     text_file.write(f"FID inf : {FID_infinity}\n")
@@ -61,7 +61,7 @@ if __name__ == "__main__":
     parser.add_argument("--path_source", type=str, default="./", help="path to original distribution dataset")
     parser.add_argument("--path_test", type=str, default="./", help="path to expiremntal distribution dataset")
     parser.add_argument("--batch_size", type=int, default=32, help="batch size for inf fid")
-    parser.add_argument("--output_path", type=str, default="./", help="path to results savind directory")
+    parser.add_argument("--output_path", type=str, default="/home/dsi/eyalbetzalel/new_metric/", help="path to results savind directory")
     opt = parser.parse_args()
     kwargs = vars(opt)
     print(opt)
